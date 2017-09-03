@@ -1,0 +1,180 @@
+<html>
+   
+   <head> <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/custom.css">
+    <script   src="https://code.jquery.com/jquery-1.12.4.min.js"   integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="   crossorigin="anonymous"></script>
+    <script src="../js/bootstrap.js"></script>
+
+    
+    <script src="js/angular.min.js"></script>   
+    <script src="apps/app.js"></script>
+    <script src="model/friendfactory.js"></script>
+    <script src="controller/friendcontroller.js"></script>
+    
+    </head>
+ 
+    <body>
+<nav class="navbar navbar-default navbar-inverse navbar-fixed-top">
+  <div class="container">
+       <div class="navbar-header">
+     <button type="button" class="navbar-toggle"data-target="#mainNavbar" data-toggle="collapse">
+     <span class="icon-bar"></span>   
+      <span class="icon-bar"></span> 
+       <span class="icon-bar"></span>   
+        
+    </button>    
+   </div>
+    <div class="navbar-collapse collapse" id="mainNavbar">
+        <ul class="nav navbar-nav">
+            
+         <li class="active"><a href="#">HOME</a></li>   
+           <li><a href="#">contact</a></li> 
+            <li><a href="#">address</a></li> 
+             <li><a href="#">about</a></li>      
+        </ul>
+       <form class="navbar-form navbar-left" role="search">
+           <div class="form-groups">
+               <input type="text" class="form-control" placeholder="search"/></div>
+           <button type="submit" class="btn btn-default">submit</button>
+            </form> 
+          <ul class="nav navbar-nav navbar-right"> 
+         <li><a href="#">subscribe</a></li>   
+        </ul>  
+    </div>
+  </div>
+  
+</nav>
+ 
+ 
+ <div class="container">
+     
+ <div ng-app="friendapp" ng-controller="friendctrl">
+       Select Sort By : 
+          <select ng-model="sortBy">
+                <option ng-selected=true>name</option>
+                <option>phone</option>
+                <option>city</option>
+           </select>
+           <input type="checkbox"  ng-model="order" ng-checked=false> Click to Reverse the Order
+        <input type="text" placeholder="Search Here" ng-model="searchTxt.name">
+        
+        
+ <div class="row">
+       <div class="col-md-6">
+      <!--  <h2>fhgfjhjhthereree </h2>-->
+        <ul>
+              <li ng-repeat="friend in friends|filter:searchTxt|orderBy:sortBy:order">
+                <table border="1">
+                    <tr>
+                        <td><img src="{{friend.pic}}"></td>
+                        <td>{{friend.name}}</td>
+                        <td>{{friend.phone}}</td>
+                        <td>{{friend.city}}</td>
+                        
+                    </tr>
+                </table>  
+            </li>
+        </ul>
+    </div>
+    <div class="col-md-6">
+         <ul>
+              <li ng-repeat="friend in friends|filter:searchTxt|orderBy:sortBy:order">
+                <table border="1">
+                    <tr>
+                        <td><img src="{{friend.pic}}"></td>
+                        <td>{{friend.name}}</td>
+                        <td>{{friend.phone}}</td>
+                        <td>{{friend.city}}</td>
+                        
+                    </tr>
+                </table>  
+            </li>
+        </ul>
+       </div>  
+        <br>
+        <br>
+        <br>  
+        <div class="col-md-6">
+         <ul>
+              <li>
+                <table border="1">
+                    <tr>
+                        <td>present</td>
+                        <td>absent</td>
+                        <td>total</td>
+                        <td>score</td>
+                        <td>percentage</td>
+                        
+                    </tr>
+                    
+                </table>  
+            </li>
+        </ul>
+        
+        
+        <form action="">
+            
+         <table border="2">
+             <tr><td><input type="text" placeholder="type name here"></td></tr>
+             <tr><td> <input type="text" placeholder="type last name here"></td></tr>
+            <tr><td><button type="submit">submit</button></td></tr>
+             
+             
+         </table>     
+        </form>
+       </div>    
+     </div>-->
+      <!--<ul ng-init="friends=['Tom','Mike','Rim','Kim']">   
+     
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+    
